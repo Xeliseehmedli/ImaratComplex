@@ -7,12 +7,12 @@ header.header-bar {
   top: 0;
   background: white;
   z-index: 1000;
-  padding: 10px 40px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ccc;
-  height: 70px;
+
+  height: 100px;
 }
 header {
   position: sticky;
@@ -35,9 +35,10 @@ header {
   height: 90vh;
   object-fit: cover;
 }
-.logo img {
-  width: 16vw;
+.logo{
+margin-top: 3%;
 }
+
 
 .header-nav li {
   list-style: none;
@@ -51,7 +52,7 @@ header {
   justify-content: end;
   gap: 27px;
 
-  margin-top: -5%;
+  margin-top: 8%;
 }
 .header-nav li a {
   text-decoration: none;
@@ -87,6 +88,9 @@ main {
 .history {
   margin-top: 5vw;
 }
+.history img{
+  margin-top: 1vw;
+}
 .history h1 {
   font-family: "Tac One", sans-serif;
   color: #e09900;
@@ -100,6 +104,9 @@ main {
   font-weight: 400;
   font-size: 18px;
   line-height: 138%;
+}
+.history-text{
+  margin-top: 1vw;
 }
 .history img {
   width: 80vw;
@@ -121,10 +128,15 @@ main {
   font-size: 60px;
   line-height: 100%;
   position: relative;
+  top: -1vw;
 }
 .heritage-photos {
   display: flex;
   gap: 10px;
+}
+.heritage-image {
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .photo-city,
@@ -142,8 +154,8 @@ main {
 }
 .arrow-icons {
   position: relative;
-
-  left: -10vw;
+  top: -1vw;
+  left: -5w;
 }
 .arrow-icons img {
   width: 38%;
@@ -200,4 +212,240 @@ main {
 .footer-copy {
   font-size: 20px;
   text-align: center;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  /* Header */
+  header.header-bar {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  .logo img {
+    width: 50vw;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+
+  .header-nav li {
+    font-size: 20px;
+  }
+
+  /* Hero */
+  .Imaratbackgr img {
+    height: 50vh;
+  }
+
+  .imaratLogo-text {
+    font-size: 36px;
+    top: 40%;
+    left: 5%;
+  }
+
+  /* Main & History */
+  main {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .history h1 {
+    font-size: 36px;
+  }
+
+  .history p {
+    font-size: 14px;
+  }
+
+  .history img {
+    width: 100%;
+  }
+
+  .religious-and-historical {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .religious-and-historical img {
+    width: 100%;
+  }
+
+  /* Gallery */
+  .gallery h1 {
+    font-size: 36px;
+  }
+
+  .heritage-photos {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .heritage-image {
+    width: 70%;
+  }
+
+  .arrow-icons {
+    display: flex;
+    gap: 10px;
+    position: static;
+    margin-top: 10px;
+  }
+
+  .arrow-icons img {
+    width: 25px;
+  }
+
+  /* Map */
+  .map-header-bar h1 {
+    font-size: 36px;
+    margin-left: 0;
+  }
+
+  .map-content img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Footer */
+  .footer-bar {
+    padding: 10px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-logos img {
+    width: 40vw;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .footer-copy {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}
+.header-nav {
+  /* Header içində nav üçün əsas konteyner */
+  background-color: #fff;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 20px;
+  }
+
+  li a {
+    text-decoration: none;
+    color: #E09900;
+    font-weight: 500;
+  }
+
+  li a.active,
+  li a:hover {
+    color: #B48C1E;
+    font-weight: 700;
+  }
+}
+
+/* Burger menyu açıldıqda */
+.nav-links.open {
+  display: block;
+  background-color: #000;
+  position: absolute;
+  top: 60px; 
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+}
+
+.nav-links.open ul {
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
+    display: block;
+  }
+}
+
+
+.header-bar {
+  position: relative; 
+
+}
+
+.burger {
+  position: absolute;
+  top: 15px;   
+  right: 20px; 
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 25px;
+  height: 20px;
+
+  display: none;
+}
+
+.burger span {
+  height: 3px;
+  background-color: #E09900;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+
+.burger.toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
 }
