@@ -12,7 +12,7 @@ header.header-bar {
   justify-content: space-between;
   align-items: center;
 
-  height: 100px;
+  height: 120px;
 }
 header {
   position: sticky;
@@ -35,12 +35,8 @@ header {
   height: 90vh;
   object-fit: cover;
 }
-.logo {
-  margin-top: 3%;
-}
-.header-nav{
-  margin-top: 2.5vw;
-}
+
+
 .header-nav li {
   list-style: none;
   font-family: "Tac One", sans-serif;
@@ -71,7 +67,7 @@ header {
 
 .Imaratbackgr {
   position: relative;
-  margin-top: 3%;
+  /* margin-top: 3%; */
 }
 .hero-section {
   margin-top: 0;
@@ -138,6 +134,8 @@ main {
 .heritage-image {
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
+  width: 40vw;
+
 }
 
 .photo-city,
@@ -157,7 +155,7 @@ main {
 .arrow-icons {
   position: relative;
   top: -1vw;
-  left: -5w;
+  left: -7vw;
 }
 .arrow-icons img {
   width: 38%;
@@ -283,15 +281,23 @@ main {
   }
 
   .heritage-photos {
-    flex-direction: column;
+  
     gap: 15px;
     align-items: center;
   }
 
   .heritage-image {
-    width: 70%;
-    height: 58vh;
+    width: 50%;
+    height: 48vh;
+
   }
+   .heritage-photos {
+ 
+    gap: 15px;
+    align-items: center;
+  }
+
+  
 
   .arrow-icons {
     display: flex;
@@ -389,7 +395,7 @@ main {
 /* Menyu sağdan sola sürüşərək açılır */
 .header-nav {
   position: fixed;
-  top: -16px;
+  top: 0;
   right: 0;
   width: 100vw;
   height: 100vh;

@@ -8,7 +8,7 @@ import Statue from "./assets/statue.png";
 import Mosque from "./assets/1.png";
 import City from "./assets/city.png";
 import Monument from "./assets/mosque.png";
-import Images from "./assets/image.png";
+
 import arrowLeft from "./assets/arrow-left.svg";
 import arrowRight from "./assets/arrow-right.svg";
 import gerbLogo from "./assets/Gerb logo.svg";
@@ -26,12 +26,12 @@ function App() {
   const [activeSection, setActiveSection] = useState("");
 
   // === Carousel State ===
-  const photos = [City, Monument, Images];
+  const photos = [City, Monument];
   const [startIndex, setStartIndex] = useState(0);
 
   const getVisiblePhotos = () => {
     const result = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
       result.push(photos[(startIndex + i) % photos.length]);
     }
     return result;
@@ -96,10 +96,10 @@ function App() {
 </nav>
 
           <div className={`burger ${isOpen ? "toggle" : ""}`} onClick={toggleMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
       </header>
 
       <section id="esas" className="hero-section">
